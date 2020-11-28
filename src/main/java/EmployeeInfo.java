@@ -704,9 +704,9 @@ public class EmployeeInfo extends javax.swing.JFrame {
         btn_clear.setEnabled(true);
 
 
-    }//GEN-LAST:event_btn_saveActionPerformed
+    }
 
-    private void btn_newActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newActionPerformed
+    private void btn_newActionPerformed(java.awt.event.ActionEvent evt) {
 
         Clearfields();
         btn_save.setEnabled(true);
@@ -714,9 +714,9 @@ public class EmployeeInfo extends javax.swing.JFrame {
         btn_update.setEnabled(false);
         btn_delete.setEnabled(false);
         btn_clear.setEnabled(false);
-    }//GEN-LAST:event_btn_newActionPerformed
+    }
 
-    private void Table_dataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Table_dataMouseClicked
+    private void Table_dataMouseClicked(java.awt.event.MouseEvent evt) {
         int row = Table_data.getSelectedRow();
         String Table_click = (Table_data.getModel().getValueAt(row, 0).toString());
 
@@ -771,7 +771,7 @@ public class EmployeeInfo extends javax.swing.JFrame {
                 employeeimage = imagedata;
 
 
-            }// end if rs.next() method here
+            }
 
 
         } catch (Exception e) {
@@ -793,7 +793,7 @@ public class EmployeeInfo extends javax.swing.JFrame {
         btn_delete.setEnabled(true);
         btn_clear.setEnabled(true);
 
-    }//GEN-LAST:event_Table_dataMouseClicked
+    }
 
     private void btn_updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateActionPerformed
 
@@ -851,9 +851,9 @@ public class EmployeeInfo extends javax.swing.JFrame {
         update_table();
 
 
-    }//GEN-LAST:event_btn_updateActionPerformed
+    }
 
-    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_deleteActionPerformed
+    private void btn_deleteActionPerformed(java.awt.event.ActionEvent evt) {
 
         if (txt_employeeid.getText().equals("")) {
             JOptionPane.showMessageDialog(null, "PLEASE SELECT DATA TO DELETE");
@@ -887,21 +887,21 @@ public class EmployeeInfo extends javax.swing.JFrame {
                 }
 
 
-            }//end if p=0
+            }
 
 
-        }//end else
+        }
         Clearfields();
         update_table();
 
 
-    }//GEN-LAST:event_btn_deleteActionPerformed
+    }
 
-    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_clearActionPerformed
+    private void btn_clearActionPerformed(java.awt.event.ActionEvent evt) {
         Clearfields();
-    }//GEN-LAST:event_btn_clearActionPerformed
+    }
 
-    private void btn_printActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_printActionPerformed
+    private void btn_printActionPerformed(java.awt.event.ActionEvent evt) {
         MessageFormat header = new MessageFormat("Employee List Report Print");
 
         MessageFormat footer = new MessageFormat("Page {0,number,integer}");
@@ -913,17 +913,10 @@ public class EmployeeInfo extends javax.swing.JFrame {
         } catch (java.awt.print.PrinterException e) {
             System.err.format("Cannot Print %s%n", e.getMessage());
         }
-    }//GEN-LAST:event_btn_printActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Windows".equals(info.getName())) {
@@ -940,7 +933,6 @@ public class EmployeeInfo extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(EmployeeInfo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
